@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Query Formatter",
+  "version": "1.0",
+  "description": "Formats Superset SQL output.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "clipboardWrite"
+  ]
+}
