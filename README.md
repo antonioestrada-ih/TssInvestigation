@@ -67,4 +67,4 @@ Admin Org: [Sample Dermatology Group][1001](...)
 
 ## Support
 
-Reach out to Antonio Estrada on Slack.
+Post in **#gt_support_organization** on Slack, or reach out to Antonio Estrada directly.
