@@ -3,15 +3,17 @@ document.getElementById('formatBtn').addEventListener('click', () => {
     const statusText = document.getElementById('status');
     const btn = document.getElementById('formatBtn');
 
-    // 1. Get text and replace literal \n with real line breaks
+    // 1. Get text and replace [BR] tokens with real line breaks
     const rawText = inputBox.value;
-    if (!rawText) return; 
-    
+    if (!rawText) return;
+
     const formattedText = rawText.replace(/\[BR\]/g, '\n');
 
     // 2. Write to clipboard
     navigator.clipboard.writeText(formattedText).then(() => {
-        // 3. UI Feedback
+        // 3. UI Feedback (reset in case a previous attempt failed)
+        statusText.innerText = "Copied to clipboard!";
+        statusText.style.color = "#10b981";
         inputBox.value = ''; // Clear the box
         btn.style.display = 'none';
         statusText.style.display = 'block';
